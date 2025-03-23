@@ -1,1 +1,9 @@
 services:
+  rabbitmq:
+    image: rabbitmq:3.12.13-management
+    ports:
+      - '5673:5672'
+      - '15673:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
